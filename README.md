@@ -33,3 +33,12 @@ npm install
 DATABASE_URL=postgres://postgres:pw@localhost:5432/postgres DEVICE_TOKEN=rahasia npm start
 curl localhost:3000/health
 ```
+
+## Deploy (Coolify VPS Zomet)
+
+- App UUID: `jxkbl0txftlkfv1dqjtmwjdu`, environment `memberkit` di project `tqzvtl1ppnpwrbf6pzces0s5`
+- URL: `https://jxkbl0txftlkfv1dqjtmwjdu.103.93.129.94.sslip.io` (Let's Encrypt, valid)
+- DB: container `e006bspftf2mjdmpbisks2k9` (postgres:18-alpine), DB & user `postgres`
+- Env app: `DATABASE_URL`, `DEVICE_TOKEN`, `PORT=3000`
+- Redeploy: `curl -X POST -H "Authorization: Bearer <coolify-token>" "http://<host>:8000/api/v1/deploy?uuid=jxkbl0txftlkfv1dqjtmwjdu"`
+- Tabel dibuat otomatis saat boot.
